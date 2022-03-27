@@ -31,6 +31,7 @@ final class SceneViewController: UIViewController, SceneDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .yellow
+        print("do")
         initForm()
         
     }
