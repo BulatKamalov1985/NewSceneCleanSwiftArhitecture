@@ -8,8 +8,15 @@
 
 enum Scene {
     enum InitForm {
-        struct Request {}
-        struct Response {}
-        struct ViewModel {}
+        
+        struct Request {
+            
+        }
+        struct Response {
+            
+        }
+        struct ViewModel {
+            
+        }
     }
 }
