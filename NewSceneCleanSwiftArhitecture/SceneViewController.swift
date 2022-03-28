@@ -11,7 +11,7 @@ import UIKit
 final class SceneViewController: UIViewController, SceneDisplayLogic {
     
     private let interactor: SceneBusinessLogic
-    private let router: SceneRoutingLogic
+    private let router: SceneRoutingLogic 
 
     init(
         interactor: SceneBusinessLogic,
