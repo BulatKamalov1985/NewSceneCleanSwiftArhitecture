@@ -113,14 +113,14 @@
 		39687CAB27F045D400C0ED34 /* NewSceneCleanSwiftArhitecture */ = {
 			isa = PBXGroup;
 			children = (
+				39687CE027F0462100C0ED34 /* SceneViewController.swift */,
+				39687CE327F0462100C0ED34 /* SceneInteractor.swift */,
 				39687CDC27F0462100C0ED34 /* ScenePresenter.swift */,
+				39687CE227F0462100C0ED34 /* SceneAssembly.swift */,
 				39687CDD27F0462100C0ED34 /* SceneWorker.swift */,
 				39687CDE27F0462100C0ED34 /* SceneRouter.swift */,
 				39687CDF27F0462100C0ED34 /* SceneModels.swift */,
-				39687CE027F0462100C0ED34 /* SceneViewController.swift */,
 				39687CE127F0462100C0ED34 /* SceneProtocols.swift */,
-				39687CE227F0462100C0ED34 /* SceneAssembly.swift */,
-				39687CE327F0462100C0ED34 /* SceneInteractor.swift */,
 				39687CBA27F045D500C0ED34 /* Info.plist */,
 			);
 			path = NewSceneCleanSwiftArhitecture;
