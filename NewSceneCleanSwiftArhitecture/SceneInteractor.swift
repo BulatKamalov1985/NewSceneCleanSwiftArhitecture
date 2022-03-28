@@ -8,6 +8,13 @@
 import Foundation
 
 final class SceneInteractor: SceneBusinessLogic, SceneDataStore {
+    
+    var InreractorString = "" {
+        didSet {
+            print("data coming from viewController to interactor \(InreractorString)")
+        }
+    }
+    
     private let presenter: ScenePresentationLogic
     private let worker: SceneWorkerLogic
 
@@ -20,8 +27,9 @@ final class SceneInteractor: SceneBusinessLogic, SceneDataStore {
     }
 
     func requestInitForm(_ request: RequestModel) {
+        InreractorString = request.stringRequest
         DispatchQueue.main.async {
-            self.presenter.presentInitForm(ResponseModel())
+            self.presenter.presentInitForm(ResponseModel.init(stringResponse: self.InreractorString))
         }
     }
 }

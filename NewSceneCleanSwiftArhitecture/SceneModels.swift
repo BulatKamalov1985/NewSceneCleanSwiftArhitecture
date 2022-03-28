@@ -11,16 +11,21 @@ typealias RequestModel = Scene.InitForm.Request
 typealias ResponseModel = Scene.InitForm.Response
 
 enum Scene {
+    
     enum InitForm {
         
         struct Request {
-            
+            var stringRequest = "1" {
+                didSet {
+                    print("data coming")
+                }
+            }
         }
         struct Response {
-            
+            var stringResponse = ""
         }
         struct ViewModel {
-            
+            var stringVM = ""
         }
     }
 }

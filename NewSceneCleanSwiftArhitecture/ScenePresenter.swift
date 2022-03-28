@@ -8,9 +8,16 @@
 
 final class ScenePresenter: ScenePresentationLogic {
     
+    var presenerString = "" {
+        didSet {
+            print("data coming from interactor to presenter \(presenerString)")
+        }
+    }
+    
     weak var viewController: SceneDisplayLogic?
 
     func presentInitForm(_ response: ResponseModel) {
-        viewController?.displayInitForm(ViewModel())
+        presenerString = response.stringResponse
+        viewController?.displayInitForm(ViewModel.init(stringVM: presenerString))
     }
 }

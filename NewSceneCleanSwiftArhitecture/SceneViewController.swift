@@ -10,6 +10,12 @@ import UIKit
 
 final class SceneViewController: UIViewController, SceneDisplayLogic {
     
+    var VCstring = "DATA" {
+        didSet {
+            print("data coming from presenter to viewController \(VCstring)")
+        }
+    }
+    
     private let interactor: SceneBusinessLogic
     private let router: SceneRoutingLogic
 
@@ -31,17 +37,20 @@ final class SceneViewController: UIViewController, SceneDisplayLogic {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .yellow
+        print("start")
         initForm()
-        
     }
 
     // MARK: - SceneDisplayLogic
 
-    func displayInitForm(_ viewModel: ViewModel) {}
+    func displayInitForm(_ viewModel: ViewModel) {
+        VCstring = viewModel.stringVM
+        
+    }
 
     // MARK: - Private
 
     private func initForm() {
-        interactor.requestInitForm(RequestModel())
+        interactor.requestInitForm(RequestModel.init(stringRequest: VCstring))
     }
 }
