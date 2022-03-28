@@ -37,11 +37,11 @@ final class SceneViewController: UIViewController, SceneDisplayLogic {
 
     // MARK: - SceneDisplayLogic
 
-    func displayInitForm(_ viewModel: Scene.InitForm.ViewModel) {}
+    func displayInitForm(_ viewModel: ViewModel) {}
 
     // MARK: - Private
 
     private func initForm() {
-        interactor.requestInitForm(Scene.InitForm.Request())
+        interactor.requestInitForm(RequestModel())
     }
 }

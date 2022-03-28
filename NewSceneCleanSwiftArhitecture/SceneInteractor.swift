@@ -19,9 +19,9 @@ final class SceneInteractor: SceneBusinessLogic, SceneDataStore {
         self.worker = worker
     }
 
-    func requestInitForm(_ request: Scene.InitForm.Request) {
+    func requestInitForm(_ request: RequestModel) {
         DispatchQueue.main.async {
-            self.presenter.presentInitForm(Scene.InitForm.Response())
+            self.presenter.presentInitForm(ResponseModel())
         }
     }
 }

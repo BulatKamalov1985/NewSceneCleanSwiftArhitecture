@@ -13,17 +13,17 @@ protocol SceneDataPassing {
 protocol SceneDataStore {}
 
 protocol SceneBusinessLogic {
-    func requestInitForm(_ request: Scene.InitForm.Request)
+    func requestInitForm(_ request: RequestModel)
 }
 
 protocol SceneWorkerLogic {}
 
 protocol ScenePresentationLogic {
-    func presentInitForm(_ response: Scene.InitForm.Response)
+    func presentInitForm(_ response: ResponseModel)
 }
 
 protocol SceneDisplayLogic: AnyObject {
-    func displayInitForm(_ viewModel: Scene.InitForm.ViewModel)
+    func displayInitForm(_ viewModel: ViewModel)
 }
 
 protocol SceneRoutingLogic {}
